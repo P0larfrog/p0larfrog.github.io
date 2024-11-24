@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Organization</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #edecea;
+        }
+        header {
+            width: 100%;
+            height: 10px;
+            display: flex;
+            align-items: center;
+            padding: 15px 20px;
+            background-color: #263a69;
+            color: white;
+          }
+          .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: -8px;
+            filter: drop-shadow(10px 7px 25px black);
+        }
+        .logo img {
+            width: 50px;
+            height: 50px;
+            filter: drop-shadow(5px 5px 25px black);
+        }
+            .dropdown {
+         position: right;    
+         margin-left: 85%;
+         display: inline-block;
+      }
+
+      .dropdown-content {
+         display: none;
+         position: absolute;      
+         background-color: white;
+         min-width: 100px;
+         right:0;
+         box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+         z-index: 1;
+      }
+
+      .dropdown-content a {
+         color: black;
+         padding: 5px 10px;
+         text-decoration: none;
+         display: block;
+      }
+
+      .dropdown-content a:hover {
+         background-color: hsl(0, 0%, 90%);
+      }
+
+      .dropdown:hover .dropdown-content {
+         display: block;
+      }
+
+      .dropdown:hover .droptap {
+               }
+      .droptap {
+         background-color: #263a69;
+         color: white;
+         padding: 5px 10px;
+         font-size: 16px;
+         cursor: pointer;
+         border-radius: 4px;
+      }
+        nav {
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 10px 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: 182px;
+            margin-left: 2px;
+            transform: translate(-50%, -50%);
+            display: flex;
+            justify-content: center;
+            width: 107%;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            padding: 5px 10px;
+            border: 1px solid transparent;
+            transition: all 0.3s;
+        }
+
+        nav ul li a:hover {
+            border-color: white;
+            border-radius: 5px;
+        }
+        .section1 {
+            height: 10px;
+            
+        }
+        .section1 img{
+            height: 198px;
+            width: 107%;
+            margin-left: -1px;
+            animation: light 2s infinite ease-in-out;
+            animation-direction: alternate;
+            mask:
+            linear-gradient(135deg,#000c 40%,#000,#000c 60%)
+            100% 100%/240% 240%;
+        }
+        
+        @keyframes light{
+            100%{
+          --i: -1;
+          mask-position: 0 0;
+            }
+        }
+        }
+        .about, .contact {
+            padding: 40px 20px;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+        }
+
+        .Key Personnel h2, .contact h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #0056b3;
+        }
+         .about h2{
+             font-size: 2rem;
+            margin-bottom: 20px;
+             margin-top: 250px;
+            color: #0056b3;
+         }
+        .about p {
+            margin-top: 50px;
+            font-size: 1rem;
+            color: #555;
+            line-height: 1.5;
+        }
+
+        .team-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .team-member {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 20px;
+            width: 250px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .team-member img {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+        }
+
+        .team-member h3 {
+            font-size: 1.2rem;
+            margin: 10px 0 5px;
+            color: #0056b3;
+        }
+
+        .team-member p {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .contact form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .contact input, .contact textarea {
+            width: 80%;
+            max-width: 500px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .contact button {
+            padding: 10px 20px;
+            border: none;
+            background-color: #0056b3;
+            color: white;
+            font-size: 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .contact button:hover {
+            background-color: #004399;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <header>
+        <div class="logo">
+            <img src="o.png" alt="Logo"></div>
+
+        <div class="dropdown">
+            <button class="droptap"><img src="n.3.png" height="15" width="25"></button>
+            <div class="dropdown-content">
+            <a href="index.htm">HOME</a>
+            <a href="page 3.htm">STRANDS</a>
+            <a href="page 2.htm">FEATURED</a>
+            <a href="page 5.htm">Q&A</a>
+            </div>
+                    <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#team">Key Personnel</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+        <div class="section1"><img src="b.2.jpg" alt="Header Image"></div>
+
+    <section id="about" class="about">
+        <h2>About Us:</h2>
+        <p>
+            Welcome to the Stand Alone Senior High School! Our mission is to empower students, enhance their learning experiences, 
+            and encourage collaboration among educators and learners. Together, we strive for academic excellence and 
+            holistic development.
+        </p>
+    </section>
+
+    <section id="team" class="team">
+        <center><h2>Key Personnel</h2>
+        <div class="team-grid">
+            <div class="team-member">
+                <alt="Principal">
+                <h3>Jennefer R. Mariano</h3>
+                <p>Principal</p>
+            </div>
+            <div class="team-member">
+                <alt="Vice Principal">
+                <h3>Jacqueline S. Mantillano</h3>
+                <p>Master Teacher ||, TIC FOR ACADEMIC</p>
+            </div>
+            <div class="team-member">
+                <alt="Teacher">
+                <h3>Juliet I. Sato</h3>
+                <p>Master Teacher |, Subject Group Head,TVL</p>
+            </div>
+            <div class="team-member">
+                <alt="Teacher">
+                <h3>Kathleen C. Abaja</h3>
+                <p>Teacher ||, Subject Group Head, GAS</p>
+            </div>
+                <div class="team-member">
+                <alt="Teacher">
+                <h3>Nathaniel A. Abad</h3>
+                <p>Teacher |||, Subject Group Head, HUMMS</p>
+            </div>
+               <div class="team-member">
+                <alt="Teacher">
+                <h3>Cynthia M. Guanzon</h3>
+                <p>Teacher ||,Subject Group Head, STEM</p>
+            </div> 
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Contact Us:</h2>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea rows="7" placeholder="Your Message"></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+  <form>
+    
+</body>
+</html>

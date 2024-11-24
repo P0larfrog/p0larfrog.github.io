@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>page 3</title>
+    <style>
+         body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('b.3.jpg');
+            background-size: cover;
+            background-position: center top;
+            background-attachment: fixed;
+          }
+          header {
+            width: 102%;
+            height: 10px;
+            display: flex;
+            align-items: center;
+            padding: 15px 20px;
+            background-color: #04356A;
+            color: white;
+          }
+          .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            filter: drop-shadow(10px 7px 20px black);
+        }
+        .logo img {
+            width: 50px;
+            height: 50px;
+        }
+        .logo span {
+            font-size: 1em;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        nav {
+            margin-top: 4px;
+            margin-left: 40px;
+            border: 2px solid #5f84a2; 
+            border-left-width: 5px;
+            border-right-width: 5px;
+            background-color: rgba(255, 255, 255, 0.5);
+            display: flex;
+            width: 80%;
+            justify-content: center;
+            gap: 20px;
+            padding: 5px 5px;
+            border-radius: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #5D8AA8;
+            font-size: 16px;
+            font-weight: bold;
+            text-align: center;
+        }
+        nav a:hover {
+            color: #293961;
+        }
+
+        .section h3 {
+            margin-top: 120px;
+            margin-left: 20px;
+            text-align: left;
+        }
+        #sashs-gallery h3 {
+            color: #04356A;
+            text-align: center;
+            font-size: 2em;
+            margin-left: 10px;
+        }
+        #sashs-gallery p {
+            font-size: 1.5em;
+            color: #555;
+            text-align: justify;
+            margin-top: -30px;
+        }
+        .sashs-gallery {
+            display: flex;
+            flex-direction: column; 
+            gap: 5px; 
+            width: 100%;
+            min-height: 350vh;
+            padding: 20px;
+            margin-top: 20px;
+            padding-bottom: 50px;
+            background-color: rgba(255, 255, 255, 0.7);
+            border-radius: 10px;
+            margin-left: 3px;
+            linear-gradient:(to bottom, rgba(255, 255, 255, 0.9), rgba(240, 240, 240, 0.8)); 
+        }
+        .row {
+            display: flex;
+            gap: 5px; 
+            justify-content: flex-start;
+        }
+        .photo {
+            border-radius: 8px; 
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+            overflow: hidden;
+            position: relative;
+        }
+        .photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .photo.large {
+            width: 50%; 
+            height: 220px;
+        }
+        .photo.medium {
+            width: 45%; 
+            height: 210px;
+        }
+        .photo.small {
+            width: 35%; 
+            height: 205px;
+        }
+        .slider {
+            width: 100%;
+            height: 350px;
+            overflow: hidden;
+            border-radius: 10px;
+            position: relative;
+        }
+        .slides {
+            display: flex;
+            transition: transform 1s ease-in-out;
+        }
+        .slides img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+        @keyframes slideAnimation {
+            0% {
+                transform: translateX(0);
+            }
+            33.33% {
+                transform: translateX(-100%);
+            }
+            66.66% {
+                transform: translateX(-200%);
+            }
+            100% {
+                transform: translateX(0);
+            }
+        }
+        .slider .slides {
+            animation: slideAnimation 9s infinite;
+        }
+        .section4 {
+            margin-top: -55px;
+            text-align: center;
+            font-size: 1em;
+            color: #555;
+            overflow: visible;
+            padding: 20px 0; 
+        }
+           .border-click2{
+            margin-left: 25px;
+            margin-top: -25px;
+            width: 50px;
+            padding: 5px;
+            color: white;
+            text-align: center;
+              
+            border: 1.5px solid black; 
+            border-radius: 30px;          
+            box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+            transition: 0.3s ease;
+            color: #5D8AA8;
+        }
+           .section5 {
+            margin-top: 50px;
+            text-align: center;
+            font-size: 1em;
+            color: #555; 
+            overflow: visible;
+            padding: 20px 0; 
+} 
+          .slider3 {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            border-radius: 10px;
+            position: relative;
+        }
+        .slides3 {
+            display: flex;
+            transition: transform 1s ease-in-out;
+        }
+        .slides3 img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+        @keyframes slide3Animation {
+            0% {
+                transform: translateX(0);
+            }
+            33.33% {
+                transform: translateX(-100%);
+            }
+            66.66% {
+                transform: translateX(-200%);
+            }
+            100% {
+                transform: translateX(0);
+            }
+        }
+
+        .slider3 .slides3 {
+            animation: slide3Animation 9s infinite;
+        }
+        .container {
+           max-width: 100%;
+           margin: 50px auto;
+           padding: 20px;
+           background-color: #fff; 
+           box-shadow: 0 0 10px rgba(0, 3, 4, 0.5); 
+         }  
+         h1 {
+           text-align: center;
+           margin-bottom: 30px;
+           color: #333; 
+          }  
+         .content {
+           display: flex;
+           gap: 20px;
+          }
+        .image-container {
+           width: 250px; 
+          }
+        .image-container img {
+           width: 150px;
+           height: 150px;
+          }
+        .text-container {
+           font-size: 15px;
+           max-height: 350px;
+           margin-top: 50px;
+           border-radius: 10px;
+         }
+        .text-container p {
+           font-size: 14px;
+           color: #555; 
+         }
+        .section6 {
+            margin-top: 50px;
+            text-align: center;
+            font-size: 1em;
+            color: #555; 
+            overflow: visible;
+            padding: 20px 0; 
+          } 
+          .slider4 {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            border-radius: 10px;
+            position: relative;
+        }
+        .slides4 {
+            display: flex;
+            transition: transform 1s ease-in-out;
+        }
+
+        .slides4 img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        @keyframes slide4Animation {
+            0% {
+                transform: translateX(0);
+            }
+            33.33% {
+                transform: translateX(-100%);
+            }
+            66.66% {
+                transform: translateX(-200%);
+            }
+            100% {
+                transform: translateX(0);
+            }
+        }
+
+        .slider4 .slides4 {
+            animation: slide3Animation 9s infinite;
+        }
+        .humss {
+            margin-top: 50px;
+            text-align: center;
+            font-size: 1em;
+            color: #555; 
+            overflow: visible;
+            padding: 20px 0; 
+           } 
+          .slider5 {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            border-radius: 10px;
+            position: relative;
+          }
+           .slides5 {
+            display: flex;
+            transition: transform 1s ease-in-out;
+        }
+        .slides5 img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+        @keyframes slide5Animation {
+            0% {
+                transform: translateX(0);
+            }
+            33.33% {
+                transform: translateX(-100%);
+            }
+            66.66% {
+                transform: translateX(-200%);
+            }
+            100% {
+                transform: translateX(0);
+            }
+        }
+        .slider5 .slides5 {
+            animation: slide3Animation 9s infinite;
+        }
+        .section7 {
+            margin-top: 50px;
+            text-align: center;
+            font-size: 1em;
+            color: #555; 
+            overflow: visible;
+            padding: 20px 0; 
+} 
+         .gas {
+            margin-top: 50px;
+            text-align: center;
+            font-size: 1em;
+            color: #555; 
+            overflow: visible;
+            padding: 20px 0; 
+} 
+          .slider6 {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            border-radius: 10px;
+            position: relative;
+        }
+        .slides6 {
+            display: flex;
+            transition: transform 1s ease-in-out;
+        }
+        .slides6 img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+        @keyframes slide6Animation {
+            0% {
+                transform: translateX(0);
+            }
+            33.33% {
+                transform: translateX(-100%);
+            }
+            66.66% {
+                transform: translateX(-200%);
+            }
+            100% {
+                transform: translateX(0);
+            }
+        }
+        .slider6 .slides6 {
+            animation: slide3Animation 9s infinite;
+        }
+            .stem {
+            margin-top: 50px;
+            text-align: center;
+            font-size: 1em;
+            color: #555; 
+            overflow: visible;
+            padding: 20px; 
+} 
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="o.png" alt="Logo">
+            <span>Stand Alone Senior High School</span>
+        </div>
+    </header>
+    <nav>
+        <a href="index.htm">HOME</a>
+        <a href="page2.htm">FEATURED</a>
+        <a href="page 4.htm">ABOUT</a>
+        <a href="page 5.htm">Q&A</a>
+    </nav>
+    </div>
+    <br>
+    <br>
+    <div class="section" style="font-size: 5px; text-align: center; color: white;">
+        <h3 style="font-size: 4em;">SHAPING HEARTS AND
+MINDS, STRIVING FOR  
+EXCELLENCE        </h3>
+       
+       
+         </div>
+    <div id="sashs-gallery" class="sashs-gallery">
+        <h3>STAND ALONE OFFERS US DIFFERENT STRANDS</h3>
+        <p>Let us explore the strands that SASHS offer ೀ</p>
+
+        <div class="row">
+            <div class="photo large"><img src="ar5.jpg" alt="Art Piece 1"></div>
+            <div class="photo medium"><img src="ar7.jpg" alt="Art Piece 2"></div>
+        </div>
+        
+        <div class="row">
+            <div class="photo small"><img src="ar3.jpg" alt="Art Piece 3"></div>
+            <div class="photo medium"><img src="ar4.jpg" alt="Art Piece 4"></div>
+        </div>
+        <div class="row">
+            <div class="photo large"><img src="ar1.jpg" alt="Art Piece 5"></div>
+            <div class="photo small"><img src="ar6.jpg" alt="Art Piece 6"></div>
+        </div> 
+       
+        <div id="stem" style="margin-top: 50px; text-align: center; font-size: 1em; color: #333; margin-bottom: 20px;">
+                    <p> STEM</p>
+                    <div class="slider">
+                    <div class="slides">
+                    <img src="st1.jpg" alt="Slide 1">
+                    <img src="st3.jpg" alt="Slide 2">
+                    <img src="st3.jpeg" alt="Slide 3">
+                    </div> 
+                    </div>
+                    </div>
+        <div class="section4">
+            <p>STEM is all about exploring the exciting worlds of Science, 
+                Technology, Engineering, and Mathematics! 
+                Here, students dive into hands-on projects, 
+                tackle real-world problems, and develop critical
+                thinking skills. This program not only prepares
+                you for college but also opens doors to rewarding 
+                careers in fields like engineering, healthcare, 
+                and tech. Join us to unleash your imagination and get ready to
+                become a master of innovation, ready to tackle challenges 
+                with fun!</div>
+            <div class="border-click2">
+            <a href="https://www.onlineshs.com/stem/" style="color: black;">More</a></div><br><br>
+            <div id="intro3" style="margin-top: 50px; text-align: center; font-size: 1em; color: #333; margin-bottom: 20px;">
+            <p> HUMSS</p>
+            <div class="slider4">
+                <div class="slides4">
+                    <img src="h3.jpg" alt="Slide 1">
+                    <img src="h1.jpg" alt="Slide 2">
+                    <img src="h3.jpeg" alt="Slide 3">
+                    </div>  
+                <div class="section6">
+                <p>HUMSS  explore the exciting worlds of Humanities and Social Sciences, where students explore human behavior, culture, and society. Through engaging subjects like literature, politics, and the arts, they develop critical thinking and communication skills. This strand prepares them for college and careers in fields like education, psychology, law, and journalism. Join us to uncover the stories that shape our world and become a voice for change!</div>
+                <div class="border-click2">
+               <a href="https://www.onlineshs.com/all-about-humss/" style="color: black;">More</a></div><br><br>
+               </div></div>              
+         <br>
+         <div id="gas" style="margin-top: 50px; text-align: center; font-size: 1em; color: #333; margin-bottom: 20px;">
+             <div id="intro9" style="margin-top: 50px; text-align: center; font-size: 1em; color: #333; margin-bottom: 20px;">
+            <p> GAS</p>
+            <div class="slider6">
+                <div class="slides6">
+                    <img src="g.jpg" alt="Slide 1">
+                    <img src="gas1.jpg" alt="Slide 2">
+                    <img src="gas2.jpeg" alt="Slide 3">
+                </div>  <div class="section7">
+                <p>Ready to explore endless possibilities? The General Academic Strand (GAS) offers a well-rounded education that opens doors to various career paths! Prepare for college and discover your passions with us in the General Academic Strand!</p>
+                <div class="border-click2">
+                <a href="https://www.onlineshs.com/gas/" style="color: black;">More</a></div><br><br>
+                </div></div>
+          <br>
+         <div id="humss" style="margin-top: 50px; text-align: center; font-size: 1em; color: #333; margin-bottom: 20px;">  
+            <p> TVL</p>
+            <div class="slider5">
+            <div class="slides5">
+                    <img src="t.jpg" alt="Slide 1">
+                    <img src="t1.jpeg" alt="Slide 2">
+                    <img src="t2.jpg" alt="Slide 3">
+                    </div>                
+           <div class="section6">
+               <p>The Technical-Vocational Livelihood (TVL) Track at our school features two exciting strands. Whether you want to code the next big app or work with electrical systems, an adventure awaits. Let’s discover your passion together!</p>
+               </div>
+           <div class="border-click2">
+           <a href="https://www.ciit.edu.ph/tvl-track/" style="color: black;">More</a>
+               </div>
+           </div> <div class="container">
+           <h1>TVL - ICT</h1>
+           <div class="content">
+           <div class="image-container">
+           <img src="ict.jpg"> </div>
+          <div class="text-container">
+          <p>Dive into the exciting world of technology with the ICT strand! If you love gadgets, coding, and creativity, this is the perfect place for you— with TESDA certifications under your belt, you'll be ready to launch your career in the digital universe right after graduation. Get ready to innovate and inspire!
+        </p>        
+       </div>
+       </div>
+       </div>
+    <div class="container">  
+    <h1>TVL - EIM</h1>
+    <div class="content">
+    <div class="image-container">
+    <img src="eim.jpg" alt="Mountain Landscape">
+      </div>
+      <div class="text-container">
+      <p>Are you ready to spark your future? The EIM strand is all about turning your passion for electricity into a thrilling career! Learn to install and maintain electrical systems while gaining practical skills through exciting projects. With TESDA certifications, you’ll be all set for a bright career in electrical engineering. Power up your potential with us!</p>
+      </div>
+      </div>
+     </div>          
+</body>
+</html>

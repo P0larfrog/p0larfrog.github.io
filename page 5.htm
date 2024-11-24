@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style> 
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #d8e8f2;
+        margin: 0;
+        padding: 0;
+        background-size: cover;
+    }
+    header {
+        width: 100%;
+        height: 10px;
+        display: flex;
+        align-items: center;
+        padding: 15px 20px;
+        background-color: #244667;
+        color: white;
+    }
+    .logo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: -8px;
+        filter: drop-shadow(10px 7px 25px black);
+    }
+    .logo img {
+        width: 50px;
+        height: 50px;
+        filter: drop-shadow(5px 5px 25px black);
+    }
+    .dropdown {
+        position: right;    
+        margin-left: 95%;
+        display: inline-block;
+    }
+    .dropdown-content {
+        display: none;
+        position: absolute;      
+        background-color: white;
+        min-width: 100px;
+        right: 0;
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+    }
+    .dropdown-content a {
+        color: black;
+        padding: 5px 10px;
+        text-decoration: none;
+        display: block;
+    }
+    .dropdown-content a:hover {
+        background-color: hsl(0, 0%, 90%);
+    }
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+    .droptap {
+        background-color: #244667;
+        color: white;
+        padding: 5px 10px;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 4px;
+    }
+    .ano{
+        align-item: center;
+        text-align: center;
+        float: center;
+        margin-top: 50px;
+        margin-left: 45px;
+        font-size: 10 em;
+    }
+    .ano span{
+        text-align: center;
+        font-variant: small-caps;
+        font-size: 10 em;
+        
+    }
+    .ui {
+        border: 2px solid;
+        margin-left: 15px;
+        margin-top: 35px;
+        padding: 20px; 
+        width: 100%;
+        height: 330px;
+        resize: horizontal;
+        overflow: auto;
+    }
+    .ui img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .likodtext {
+        height: 130px;
+        width: 40%;
+        float: right;
+        align-items: right;
+        margin-top: -240px;
+        margin-right: -5px;
+    }
+    .likodtext p {
+        font-size: 0.7em;
+    }
+  </style>
+</head>
+<body>
+  <header>
+      <div class="logo">
+          <img src="o.png" alt="Logo">
+      </div>
+      <div class="dropdown">
+          <button class="droptap"><img src="n.3.png" height="15" width="25"></button>
+          <div class="dropdown-content">
+              <a href="index.htm">HOME</a>
+              <a href="page3.htm">STRANDS</a>
+              <a href="page 4.htm">ABOUT</a>
+              <a href="page 2.htm">FEATURED</a>
+          </div>
+      </div>
+  </header>
+  <div class="ano">
+      <span>Welcome to SASHS! Know Something About Us!</span>
+  </div>
+  <div class="ui"> P.S swipe to bottom right
+      <img src="q.jpg" alt="Image">
+  </div>
+  <div class="likodtext">
+      <p>Stand Alone School is a dedicated school that provides students with the tools and confidence to pursue their dreams. The dedicated teachers are always willing to help, offering programs that prepare students for their future. The learning environment is both challenging and motivating, allowing students to explore different interests, join clubs, and participate in activities that help them grow. The dedicated teachers and supportive environment make Stand Alone School a transformative choice for students, preparing them for their future with the skills and confidence they have gained.
+      </div>     
+       <div class="ui"> P.S swipe to bottom right
+      <img src="q1.jpg" alt="Image">
+  </div>
+  <div class="likodtext">
+      <p>What are the school hours? Classes run from 7:30 AM to 3:35 PM, Monday, Tuesday, and Friday. Wednesday and Thursday school hours is 7:30am to 2:45pm.          What programs do you offer? We offer strands under the Senior High School program, including STEM, ABM, HUMSS, and ICT. Learn more about each on our Strands page. How can I contact the school? You can reach us via our Contact Us page, email, or by calling our office during school hours.      </p>      </div> 
+      <br>
+  </body>
+</html>

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activities and Events</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #d8e8f2;
+            margin: 0;
+            padding: 0;
+            background-size: cover;
+            background-color:
+        }
+        header {
+            width: 100%;
+            height: 10px;
+            display: flex;
+            align-items: center;
+            padding: 15px 20px;
+            background-color: #244667;
+            color: white;
+          }
+          .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: -8px;
+            filter: drop-shadow(10px 7px 25px black);
+        }
+        .logo img {
+            width: 50px;
+            height: 50px;
+            filter: drop-shadow(5px 5px 25px black);
+        }
+        .dropdown {
+         position: right;    
+         margin-left: 85%;
+         display: inline-block;
+      }
+
+      .dropdown-content {
+         display: none;
+         position: absolute;      
+         background-color: white;
+         min-width: 100px;
+         right:0;
+         box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+         z-index: 1;
+      }
+
+      .dropdown-content a {
+         color: black;
+         padding: 5px 10px;
+         text-decoration: none;
+         display: block;
+      }
+
+      .dropdown-content a:hover {
+         background-color: hsl(0, 0%, 90%);
+      }
+
+      .dropdown:hover .dropdown-content {
+         display: block;
+      }
+
+      .dropdown:hover .droptap {
+               }
+      .droptap {
+         background-color: #244667;
+         color: white;
+         padding: 5px 10px;
+         font-size: 16px;
+         cursor: pointer;
+         border-radius: 4px;
+      }
+        }
+        h1, h2 {
+            text-align: center;
+        }
+
+        .color {
+            background: linear-gradient(to bottom, #FF0000, #0000FF);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .featured {
+            padding: 20px;
+            font-size: 1.2em;
+            align-item: center;
+            text-align: center;
+        }
+
+        .grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .card {
+            background-color: #fff;
+            border: 2px solid #000;
+            border-radius: 10px;
+            width: 300px;
+            text-align: center;
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card h1 {
+            font-size: 1.2rem;
+            padding: 10px 0;
+        }
+
+        .card-content {
+            padding: 10px;
+        }
+     
+    </style>
+</head>
+<body>
+    <header>
+      <div class="logo">
+            <img src="o.png" alt="Logo"></div>
+            <div class="dropdown">
+            <button class="droptap"><img src="n.3.png" height="15" width="25"></button>
+            <div class="dropdown-content">
+            <a href="index.htm">HOME</a>
+            <a href="page 3.htm">STRANDS</a>
+            <a href="page 4.htm">ABOUT</a>
+            <a href="page 5.htm">Q&A</a>
+            </div>
+    </header>
+
+    <main>
+        <section class="featured">
+            <h1 class="color">STAND ALONE SENIOR HIGH SCHOOL ACTIVITIES AND EVENTS</h1>
+            <h2>EVENT GALLERY</h2>
+            <div class="grid">
+              
+              <div class="card">
+                <img src="lolo.jpg" alt="Teacher's Day">
+                <h1>TEACHER'S DAY</h1>
+                </div>
+                <div class="card">
+                    <img src="lol.jpg" alt="Teacher's Day">
+                    <h1>TEACHER'S DAY</h1>
+                </div>
+                <div class="card">
+                    <img src="lola.jpg" alt="Teacher's Day">
+                    <h1>TEACHER'S DAY</h1>
+                </div>
+              <div class="card">
+                <img src="sensya.jpg" alt="Science Fair">
+                <h1>SCIENCE FAIR</h1>
+              </div>
+              
+              
+                <div class="card">
+                    <img src="huhubells.jpg" alt="Science Fair">
+                    <h1>SCIENCE FAIR</h1>
+                </div>
+                <div class="card">
+                    <img src="sci.jpg" alt="Closing of Science Month">
+                    <h1>CLOSING OF SCIENCE MONTH</h1>
+                </div>
+              <div class="card">
+                <img src="he.jpg" alt="Awarding">
+                <h1>AWARDING</h1>
+              </div>
+                <div class="card">
+                    <img src="ha.jpg" alt="Awarding">
+                    <h1>AWARDING</h1>
+                </div>
+                <div class="card">
+                    <img src="reco.jpg" alt="Recognition Day">
+                    <h1>RECOGNITION DAY</h1>
+                </div>
+                  <div class="card">
+                 <img src="rec.jpg" alt="Recognition Day">
+                    <h1>RECOGNITION DAY</h1>
+                  </div>
+                    <div class="card">
+                      <img src="mwe.jpg" alt="Recognition Day">
+                      <h1>RECOGNITION DAY</h1>
+                    </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
